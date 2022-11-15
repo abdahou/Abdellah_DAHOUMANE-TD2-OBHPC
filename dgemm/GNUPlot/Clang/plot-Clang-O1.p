@@ -4,8 +4,8 @@ set ylabel 'Bandwidth [MiB/s]'                          # y-axis label
 set style data histograms
 set style fill solid 1.0 border -1
 set style histogram clustered gap 1 title  offset character 0, 0, 0
-stats 'dgemm_x8/Clang/O3/performances-dgemm_x8-Clang-03.dat' matrix nooutput
+stats 'dgemm_x8/Clang/O1/performances-dgemm_x8-Clang-01.dat' matrix nooutput
 set terminal png size 1000,700 enhanced font "Helvetica,20"
-set output 'gnuplot-dgemm_x8-Clang-O3.png'
+set output 'gnuplot-dgemm_x8-Clang-O1.png'
 set xtics format ""
-plot 'dgemm_x8/Clang/O3/performances-dgemm_x8-Clang-03.dat' every ::1 using STATS_size_x:xtic(1) title 'O3'
+plot 'dgemm_x8/Clang/O1/performances-dgemm_x8-Clang-01.dat' every ::1 using STATS_size_x:xtic(1) title 'O1'
